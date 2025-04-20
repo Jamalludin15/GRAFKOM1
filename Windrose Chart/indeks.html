@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Windrose Chart Nilai TBP - 5 Warna</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>VISUALISASI NILAI TBP MAHASISWA</h1>
+        <h2>Program Studi Teknik Informatika - Universitas Maritim Raja Ali Haji</h2>
+    </div>
+
+    <div class="control-panel">
+        <h3>Pilih Mahasiswa</h3>
+        <select id="studentSelect">
+            <option value="">-- Pilih Mahasiswa --</option>
+        </select>
+        <button id="showBtn">Tampilkan Nilai</button>
+        <button id="showAllBtn">Tampilkan Semua</button>
+    </div>
+
+    <div class="student-info" id="studentInfo" style="display:none;">
+        <h3>Informasi Mahasiswa</h3>
+        <div id="infoContent"></div>
+    </div>
+
+    <div class="chart-container">
+        <h3 id="chartTitle">Distribusi Nilai TBP Mahasiswa</h3>
+        <div id="windroseChart"></div>
+        <div class="legend" id="chartLegend"></div>
+    </div>
+
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>NIM</th>
+                <th>CPMK12</th>
+                <th>CPMK31</th>
+                <th>CPMK71</th>
+                <th>CPMK72</th>
+                <th>Total TBP</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>

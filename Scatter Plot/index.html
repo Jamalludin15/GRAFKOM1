@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scatterplot Penilaian Mahasiswa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Scatterplot Penilaian Mahasiswa</h1>
+        
+        <div class="controls">
+            <div>
+                <label for="x-axis">Sumbu X:</label>
+                <select id="x-axis">
+                    <option value="TBP">TBP Total</option>
+                    <option value="TUGAS">TUGAS (CPMK71)</option>
+                    <option value="UTS">UTS (CPMK71)</option>
+                    <option value="UAS">UAS (CPMK71 & 72)</option>
+                    <option value="NilaiAkhir">Nilai Akhir</option>
+                    <option value="CPMK012">CPMK012</option>
+                    <option value="CPMK031">CPMK031</option>
+                    <option value="CPMK071">CPMK071</option>
+                    <option value="CPMK072">CPMK072</option>
+                </select>
+            </div>
+            
+            <div>
+                <label for="y-axis">Sumbu Y:</label>
+                <select id="y-axis">
+                    <option value="NilaiAkhir">Nilai Akhir</option>
+                    <option value="TBP">TBP Total</option>
+                    <option value="TUGAS">TUGAS (CPMK71)</option>
+                    <option value="UTS">UTS (CPMK71)</option>
+                    <option value="UAS">UAS (CPMK71 & 72)</option>
+                    <option value="CPMK012">CPMK012</option>
+                    <option value="CPMK031">CPMK031</option>
+                    <option value="CPMK071">CPMK071</option>
+                    <option value="CPMK072">CPMK072</option>
+                </select>
+            </div>
+            
+            <button id="update-chart">Update Chart</button>
+        </div>
+        
+        <div class="chart-container">
+            <canvas id="scatterplot"></canvas>
+            <div class="tooltip" id="tooltip"></div>
+        </div>
+        
+        <div class="legend" id="legend">
+            <!-- Legenda akan dibuat oleh javascript -->
+        </div>
+    </div>
+
+    <div class="data-controls">
+        <div>
+            <label for="data-display">Tampilkan Data:</label>
+            <select id="data-display">
+                <option value="all">Semua Mahasiswa</option>
+                <option value="sample">Contoh Beberapa Mahasiswa</option>
+            </select>
+        </div>
+        
+        <div>
+            <label for="search-nim">Cari NIM:</label>
+            <input type="text" id="search-nim" placeholder="Masukkan NIM">
+            <button id="search-button">Cari</button>
+        </div>
+    </div>
+    
+    <div class="student-list" id="student-list">
+        <!-- Student list will be generated here -->
+    </div>
+    
+    <div class="notification" id="notification"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

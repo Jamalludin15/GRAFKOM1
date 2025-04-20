@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualisasi Nilai Akhir Mahasiswa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chart-card">
+        <div class="chart-header">
+            <h1>SPIDER CHART</h1>
+            <p>Total Nilai uts uas dan nilai Akhir Mahasiswa</p>
+        </div>
+        <div class="chart-container">
+            <div class="data-selector">
+                <label for="dataType">Tampilkan Nilai: </label>
+                <select id="dataType" class="data-select">
+                    <option value="total">Total</option>
+                    <option value="uts">UTS</option>
+                    <option value="uas">UAS</option>
+                </select>
+            </div>
+            <div class="radar-container">
+                <canvas class="radar-canvas" id="radarCanvas" width="450" height="450"></canvas>
+                <div class="radar-labels" id="radarLabels"></div>
+            </div>
+        </div>
+        <div class="chart-controls">
+            <div class="search-container">
+                <input type="text" class="search-input" id="searchInput" placeholder="Cari NIM...">
+                <button class="search-btn" id="searchBtn">Cari</button>
+                <button class="reset-btn" id="resetBtn">Reset</button>
+            </div>
+            <button class="next-btn" id="nextBtn">Next Group</button>
+        </div>
+    </div>
+    <div class="radar-tooltip" id="radarTooltip"></div>
+    <script src="script.js"></script>
+</body>
+</html>
